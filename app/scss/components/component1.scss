@@ -1,2 +1,6 @@
 @use '../util' as *;
-@use '../util' as *;
+@use '../globals' as *;
+
+body{
+    font-family: 'Josefin Sans', sans-serif;
+}

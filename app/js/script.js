@@ -1,22 +1,26 @@
-console.log('HELLO');
+console.log("HELLO");
 
 const test = () => {
-	console.log('this is a test');
+  console.log("this is a test");
 };
-//remove duplicate from numbers
-const numbers=[1,2,3,1,4,5,6,7,7,7,8,1,2]
 
+const inputvalue = document.getElementById("email");
+const hide = document.getElementsByClassName("hide");
 
+function validateEmail(input) {
+  var filter =
+    /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  if (filter.test(inputvalue.value)) {
+    inputvalue.style.color = "green";
 
-let uniqueNumbers = [];
-numbers.forEach((element) => {
-    if (!uniqueNumbers.includes(element)) {
-        uniqueNumbers.push(element);
-    }
-});
+    hide[0].style.opacity = "0";
 
-let unique = [...new Set(numbers)];
+    return true;
+  } else inputvalue.style.color = "red";
 
-console.log(uniqueNumbers);
+  hide[0].style.opacity = "1";
 
-console.log(unique);
+  {
+    return false;
+  }
+}

@@ -33,9 +33,9 @@
 			Hello fellow shoppers! We're currently building our new fashion store.
 			Add your email below to stay up-to-date with announcements and our launch deals.
 		</p>
-		<form class="search-wrapper cf">
-			<input type="text" placeholder="Enter your email..." required style="box-shadow: none">
-			<button type="submit"><img src="/app/assets/images/icon-arrow.svg" alt=""></button>
+		<form class="search-wrapper cf" autocomplete="off">
+			<input id="email" onkeypress="validateEmail()" type="text" placeholder="Enter your email..." required style="box-shadow: none">
+			<button type="button" onclick="validateEmail()" ><span class="hide">email is not valid</span><img src="/app/assets/images/icon-arrow.svg" alt=""></button>
 		</form>
 
 	</div>

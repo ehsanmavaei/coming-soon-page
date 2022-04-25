@@ -1,13 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title></title>
-		<link rel="stylesheet" href="/dist/style.css" />
-		<script defer src="/dist/script.js"></script>
-	</head>
-	<body>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title></title>
+	<link rel="stylesheet" href="/dist/style.css" />
+	<script defer src="/dist/script.js"></script>
+</head>
+
+<body>
+	<div class="main flex">
+		<div class="logo">
+			<img src="/app/assets/images/logo.svg" alt="">
+		</div>
+		<div class="hero-image">
+			<picture>
+				<source media="(min-width:760px)" srcset="/app/assets/images/hero-desktop.jpg">
+				<source media="(min-width:465px)" srcset="/app/assets/images/hero-mobile.jpg">
+				<img src="/app/assets/images/hero-mobile.jpg" alt="Flowers" style="width:auto;">
+			</picture>
+		
+		</div>
+
+
+
 	
-	</body>
+	<div class="card">
+		<h1>WE'RE</h1>
+		<h1>COMING <br>SOON</h1>
+		<p>
+			Hello fellow shoppers! We're currently building our new fashion store.
+			Add your email below to stay up-to-date with announcements and our launch deals.
+		</p>
+		<form class="search-wrapper cf">
+			<input type="text" placeholder="Enter your email..." required style="box-shadow: none">
+			<button type="submit"><img src="/app/assets/images/icon-arrow.svg" alt=""></button>
+		</form>
+
+	</div>
+
+
+
+</body>
+
 </html>
+

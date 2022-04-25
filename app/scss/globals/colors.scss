@@ -14,5 +14,7 @@ $dark-Grayish-Red: hsl(0, 6%, 24%);
 //Gradients
 
 
-$libear1:linear-gradient(135deg, hsl(0, 0%, 100%), to hsl(0, 100%, 98%));
-$libear:linear-gradient(135deg,hsl(0, 80%, 86%), to hsl(0, 74%, 74%));
+$linear1:linear-gradient(135deg, hsl(0, 0%, 100%), to hsl(0, 100%, 98%));
+$linear:linear-gradient(135deg,hsl(0, 80%, 86%), to hsl(0, 74%, 74%));
+ $background1:linear-gradient(135deg,hsl(0, 80%, 86%),  hsl(0, 74%, 74%))
+          

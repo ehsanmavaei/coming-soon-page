@@ -1,6 +1,199 @@
-@use '../util' as *;
-@use '../globals' as *;
+@use '../util'as *;
+@use '../globals'as *;
 
-body{
+body {
     font-family: 'Josefin Sans', sans-serif;
+    line-height: 1.6;
+}
+
+.main {
+    margin-right: auto;
+    margin-left: auto;
+    border: 1px solid $linear;
+    width: min(100%, 400px);
+
+
+
+}
+
+%padding {
+    padding: 2rem;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.logo {
+    @extend %padding;
+    grid-area: logo;
+    align-self: flex-start;
+
+    img {
+        width: 100px;
+    }
+}
+
+.hero-image {
+    grid-area: image;
+
+
+}
+
+.card {
+    grid-area: card;
+    @extend %padding;
+    text-align: center;
+
+    h1:first-of-type {
+        font-size: 2.4rem;
+
+
+        color: $desaturated-Red;
+        text-transform: capitalize;
+        font-weight: 200;
+
+
+    }
+
+    h1:last-of-type {
+
+
+        font-size: 2.8rem;
+        font-weight: 800;
+        text-transform: capitalize;
+
+        color: $dark-Grayish-Red;
+
+        letter-spacing: 6px;
+
+    }
+
+    p {
+
+
+        color: $desaturated-Red;
+        font-weight: 200;
+
+    }
+
+
+    .cf:before,
+    .cf:after {
+        content: "";
+        display: table;
+    }
+
+    .cf:after {
+        clear: both;
+    }
+
+    .cf {
+        zoom: 1;
+    }
+
+
+
+    .search-wrapper {
+        width: 350px;
+        margin: 40px 0;
+        border-radius: 40px;
+
+        box-shadow: 0 4px 20px -2px #e9e9e9;
+    }
+
+
+
+    .search-wrapper input {
+        padding-left: 20px;
+        width: 230px;
+
+        padding: 10px 5px;
+
+
+        border: 0;
+
+        border-radius: 40px;
+        border-top-style: none;
+    }
+
+    .search-wrapper input:focus {
+        outline: 0;
+
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.8) inset;
+    }
+
+
+
+
+    .search-wrapper button {
+        overflow: visible;
+        position: relative;
+        float: right;
+        border: 0;
+        padding: 0;
+        cursor: pointer;
+        height: 40px;
+        width: 80px;
+
+
+        text-transform: uppercase;
+        background: $background1;
+        border-radius: 40px;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
+    }
+
+
+    .search-wrapper button:active,
+    .search-wrapper button:focus {
+        background: $desaturated-Red;
+        outline: 0;
+    }
+
+
+
+
+}
+
+
+
+
+@media screen and(min-width:760px) {
+
+    .main {
+        width: min(100%, 1400px);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 80px 1fr;
+        grid-template-areas:
+            "logo image"
+            "card image"
+            "card image"
+
+
+
+
+        ;
+
+        .card {
+
+            text-align: left !important;
+            p{
+                padding-top: 20px;
+            }
+        }
+    }
+
+    .search-wrapper {
+        width: 100% !important;
+    }
+
+    .search-wrapper input {
+        width: 60% !important;
+
+    }
+
+
 }
